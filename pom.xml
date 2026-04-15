@@ -11,6 +11,10 @@
         <version>3.2.0</version>
     </parent>
 
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
     <dependencies>
         <!-- Spring Web -->
         <dependency>
@@ -33,7 +37,14 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <java.version>17</java.version>
-    </properties>
+    <!-- ✅ VERY IMPORTANT -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
